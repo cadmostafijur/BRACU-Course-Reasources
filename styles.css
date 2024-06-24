@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+#search-bar {
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    margin: 2rem;
+}
+
+.course-list {
+    margin-right: 2rem;
+}
+
+.course-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-list li {
+    background-color: #0073e6;
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.course-list li:hover {
+    background-color: #005bb5;
+}
+
+.course-resources {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+#resource-container {
+    margin-top: 1rem;
+}
+
+.resource-item {
+    margin-bottom: 1rem;
+}
+ /* CSS styles for buttons */
+ button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #005bb5;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
