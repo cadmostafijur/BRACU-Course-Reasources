@@ -1,0 +1,26 @@
+For R1
+en
+config t
+
+interface gigabitEthernet0/0
+ ip address 192.168.50.1 255.255.255.0
+ ip helper-address 192.168.60.253
+ no shutdown
+exit
+
+interface gigabitEthernet0/1
+ ip address 192.168.60.1 255.255.255.0
+ no shutdown
+exit
+
+interface serial0/0/0
+ ip address 10.3.3.1 255.255.255.252
+ no shutdown
+exit
+
+end
+write memory
+
+R1 dhcp conn
+ping 192.168.60.253
+

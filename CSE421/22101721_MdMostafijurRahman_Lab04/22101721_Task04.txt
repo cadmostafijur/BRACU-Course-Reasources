@@ -1,0 +1,26 @@
+﻿﻿PC-A:
+
+
+tracert 192.0.0.10
+tracert 2001:db8:f:f::10
+
+
+Edge_Router>en
+Edge_Router#conf t
+Edge_Router(config)#ip route 0.0.0.0 0.0.0.0 s0/0/0
+Edge_Router(config)#exit
+Edge_Router#
+Edge_Router#show ip route
+Edge_Router#conf t
+Edge_Router(config)#ip route 0.0.0.0 0.0.0.0 s0/0/1
+Edge_Router#conf t
+Edge_Router(config)#ip route 0.0.0.0 0.0.0.0 s0/0/0 5
+Edge_Router(config)#exit
+Edge_Router#conf t
+Edge_Router(config)#int s/0/0/0
+Edge_Router(config-if)#shut
+Edge_Router(config-if)#exit
+Edge_Router(config)#show ipv6 route
+Edge_Router(config)#ipv6 route ::/0 2001:DB8:A:2::1 5
+Edge_Router(config-if)#exit
+Edge_Router(config)#exit
